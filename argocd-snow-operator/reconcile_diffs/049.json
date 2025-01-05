@@ -1,0 +1,12 @@
+{
+    "controller": "application",
+    "controllerGroup": "argoproj.io",
+    "controllerKind": "Application",
+    "Application": {
+        "name": "nginx-test",
+        "namespace": "argocd"
+    },
+    "namespace": "argocd",
+    "name": "nginx-test",
+    "reconcileID": "719d6203-bd9b-4a65-adc1-7d037ca1b66b"
+}

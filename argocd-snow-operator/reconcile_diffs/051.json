@@ -1,0 +1,265 @@
+Application	{
+    "controller": "application",
+    "controllerGroup": "argoproj.io",
+    "controllerKind": "Application",
+    "Application": {
+        "name": "nginx-test",
+        "namespace": "argocd"
+    },
+    "namespace": "argocd",
+    "name": "nginx-test",
+    "reconcileID": "cedf0889-52b9-4721-a336-7e03b7a84a32",
+    "appObject": {
+        "apiVersion": "argoproj.io/v1alpha1",
+        "kind": "Application",
+        "metadata": {
+            "annotations": {
+                "argocd.argoproj.io/compare-options": "IgnoreExtraneous",
+                "foo.bar.com/snow-data": "{\n  \"snow\": \"data\"\n}\n",
+                "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"argoproj.io/v1alpha1\",\"kind\":\"Application\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/compare-options\":\"IgnoreExtraneous\",\"foo.bar.com/snow-data\":\"{\\n  \\\"snow\\\": \\\"data\\\"\\n}\\n\",\"test\":\"test 04\"},\"finalizers\":[\"resources-finalizer.argocd.argoproj.io\"],\"name\":\"nginx-test\",\"namespace\":\"argocd\"},\"spec\":{\"destination\":{\"namespace\":\"nginx-test\",\"server\":\"https://kubernetes.default.svc\"},\"project\":\"default\",\"source\":{\"path\":\"./app-of-apps/manifests/simple-app\",\"repoURL\":\"https://github.com/dudick123/hello-argo.git\",\"targetRevision\":\"HEAD\"},\"syncPolicy\":{\"automated\":{\"prune\":true,\"selfHeal\":true},\"syncOptions\":[\"CreateNamespace=true\",\"RespectIgnoreDifferences=true\"]}}}\n",
+                "test": "test 04"
+            },
+            "creationTimestamp": "2025-01-04T20:21:10Z",
+            "finalizers": [
+                "resources-finalizer.argocd.argoproj.io"
+            ],
+            "generation": 4,
+            "managedFields": [
+                {
+                    "apiVersion": "argoproj.io/v1alpha1",
+                    "fieldsType": "FieldsV1",
+                    "fieldsV1": {
+                        "f:metadata": {
+                            "f:annotations": {
+                                ".": {},
+                                "f:argocd.argoproj.io/compare-options": {},
+                                "f:foo.bar.com/snow-data": {},
+                                "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                                "f:test": {}
+                            },
+                            "f:finalizers": {
+                                ".": {},
+                                "v:\"resources-finalizer.argocd.argoproj.io\"": {}
+                            }
+                        },
+                        "f:spec": {
+                            ".": {},
+                            "f:destination": {
+                                ".": {},
+                                "f:namespace": {},
+                                "f:server": {}
+                            },
+                            "f:project": {},
+                            "f:source": {
+                                ".": {},
+                                "f:path": {},
+                                "f:repoURL": {},
+                                "f:targetRevision": {}
+                            },
+                            "f:syncPolicy": {
+                                ".": {},
+                                "f:automated": {
+                                    ".": {},
+                                    "f:prune": {},
+                                    "f:selfHeal": {}
+                                },
+                                "f:syncOptions": {}
+                            }
+                        }
+                    },
+                    "manager": "kubectl-client-side-apply",
+                    "operation": "Update",
+                    "time": "2025-01-04T20:21:10Z"
+                },
+                {
+                    "apiVersion": "argoproj.io/v1alpha1",
+                    "fieldsType": "FieldsV1",
+                    "fieldsV1": {
+                        "f:operation": {
+                            ".": {},
+                            "f:initiatedBy": {
+                                ".": {},
+                                "f:automated": {}
+                            },
+                            "f:retry": {
+                                ".": {},
+                                "f:limit": {}
+                            },
+                            "f:sync": {
+                                ".": {},
+                                "f:prune": {},
+                                "f:revision": {},
+                                "f:syncOptions": {}
+                            }
+                        },
+                        "f:status": {
+                            ".": {},
+                            "f:controllerNamespace": {},
+                            "f:health": {
+                                ".": {},
+                                "f:status": {}
+                            },
+                            "f:operationState": {
+                                ".": {},
+                                "f:operation": {
+                                    ".": {},
+                                    "f:initiatedBy": {
+                                        ".": {},
+                                        "f:automated": {}
+                                    },
+                                    "f:retry": {
+                                        ".": {},
+                                        "f:limit": {}
+                                    },
+                                    "f:sync": {
+                                        ".": {},
+                                        "f:prune": {},
+                                        "f:revision": {},
+                                        "f:syncOptions": {}
+                                    }
+                                },
+                                "f:phase": {},
+                                "f:startedAt": {}
+                            },
+                            "f:reconciledAt": {},
+                            "f:resources": {},
+                            "f:sourceType": {},
+                            "f:summary": {},
+                            "f:sync": {
+                                ".": {},
+                                "f:comparedTo": {
+                                    ".": {},
+                                    "f:destination": {
+                                        ".": {},
+                                        "f:namespace": {},
+                                        "f:server": {}
+                                    },
+                                    "f:source": {
+                                        ".": {},
+                                        "f:path": {},
+                                        "f:repoURL": {},
+                                        "f:targetRevision": {}
+                                    }
+                                },
+                                "f:revision": {},
+                                "f:status": {}
+                            }
+                        }
+                    },
+                    "manager": "argocd-application-controller",
+                    "operation": "Update",
+                    "time": "2025-01-04T20:21:11Z"
+                }
+            ],
+            "name": "nginx-test",
+            "namespace": "argocd",
+            "resourceVersion": "96818",
+            "uid": "c6c974fa-ba8d-44eb-a1f1-d03fa21c7d61"
+        },
+        "operation": {
+            "initiatedBy": {
+                "automated": true
+            },
+            "retry": {
+                "limit": 5
+            },
+            "sync": {
+                "prune": true,
+                "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                "syncOptions": [
+                    "CreateNamespace=true",
+                    "RespectIgnoreDifferences=true"
+                ]
+            }
+        },
+        "spec": {
+            "destination": {
+                "namespace": "nginx-test",
+                "server": "https://kubernetes.default.svc"
+            },
+            "project": "default",
+            "source": {
+                "path": "./app-of-apps/manifests/simple-app",
+                "repoURL": "https://github.com/dudick123/hello-argo.git",
+                "targetRevision": "HEAD"
+            },
+            "syncPolicy": {
+                "automated": {
+                    "prune": true,
+                    "selfHeal": true
+                },
+                "syncOptions": [
+                    "CreateNamespace=true",
+                    "RespectIgnoreDifferences=true"
+                ]
+            }
+        },
+        "status": {
+            "controllerNamespace": "argocd",
+            "health": {
+                "status": "Missing"
+            },
+            "operationState": {
+                "operation": {
+                    "initiatedBy": {
+                        "automated": true
+                    },
+                    "retry": {
+                        "limit": 5
+                    },
+                    "sync": {
+                        "prune": true,
+                        "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                        "syncOptions": [
+                            "CreateNamespace=true",
+                            "RespectIgnoreDifferences=true"
+                        ]
+                    }
+                },
+                "phase": "Running",
+                "startedAt": "2025-01-04T20:21:11Z"
+            },
+            "reconciledAt": "2025-01-04T20:21:10Z",
+            "resources": [
+                {
+                    "health": {
+                        "status": "Missing"
+                    },
+                    "kind": "Service",
+                    "name": "simple-service",
+                    "namespace": "nginx-test",
+                    "status": "OutOfSync",
+                    "version": "v1"
+                },
+                {
+                    "group": "apps",
+                    "health": {
+                        "status": "Missing"
+                    },
+                    "kind": "Deployment",
+                    "name": "simple-deployment",
+                    "namespace": "nginx-test",
+                    "status": "OutOfSync",
+                    "version": "v1"
+                }
+            ],
+            "sourceType": "Directory",
+            "summary": {},
+            "sync": {
+                "comparedTo": {
+                    "destination": {
+                        "namespace": "nginx-test",
+                        "server": "https://kubernetes.default.svc"
+                    },
+                    "source": {
+                        "path": "./app-of-apps/manifests/simple-app",
+                        "repoURL": "https://github.com/dudick123/hello-argo.git",
+                        "targetRevision": "HEAD"
+                    }
+                },
+                "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                "status": "OutOfSync"
+            }
+        }
+    }
+}
