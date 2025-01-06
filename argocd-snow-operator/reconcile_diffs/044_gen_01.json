@@ -1,0 +1,103 @@
+{
+    "controller": "application",
+    "controllerGroup": "argoproj.io",
+    "controllerKind": "Application",
+    "Application": {
+        "name": "nginx-test",
+        "namespace": "argocd"
+    },
+    "namespace": "argocd",
+    "name": "nginx-test",
+    "reconcileID": "d7679856-4180-448c-9b0d-8917471e4338",
+    "appObject": {
+        "apiVersion": "argoproj.io/v1alpha1",
+        "kind": "Application",
+        "metadata": {
+            "annotations": {
+                "argocd.argoproj.io/compare-options": "IgnoreExtraneous",
+                "foo.bar.com/snow-data": "{\n  \"snow\": \"data\"\n}\n",
+                "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"argoproj.io/v1alpha1\",\"kind\":\"Application\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/compare-options\":\"IgnoreExtraneous\",\"foo.bar.com/snow-data\":\"{\\n  \\\"snow\\\": \\\"data\\\"\\n}\\n\",\"test\":\"test 04\"},\"finalizers\":[\"resources-finalizer.argocd.argoproj.io\"],\"name\":\"nginx-test\",\"namespace\":\"argocd\"},\"spec\":{\"destination\":{\"namespace\":\"nginx-test\",\"server\":\"https://kubernetes.default.svc\"},\"project\":\"default\",\"source\":{\"path\":\"./app-of-apps/manifests/simple-app\",\"repoURL\":\"https://github.com/dudick123/hello-argo.git\",\"targetRevision\":\"HEAD\"},\"syncPolicy\":{\"automated\":{\"prune\":true,\"selfHeal\":true},\"syncOptions\":[\"CreateNamespace=true\",\"RespectIgnoreDifferences=true\"]}}}\n",
+                "test": "test 04"
+            },
+            "creationTimestamp": "2025-01-04T20:21:10Z",
+            "finalizers": [
+                "resources-finalizer.argocd.argoproj.io"
+            ],
+            "generation": 1,
+            "managedFields": [
+                {
+                    "apiVersion": "argoproj.io/v1alpha1",
+                    "fieldsType": "FieldsV1",
+                    "fieldsV1": {
+                        "f:metadata": {
+                            "f:annotations": {
+                                ".": {},
+                                "f:argocd.argoproj.io/compare-options": {},
+                                "f:foo.bar.com/snow-data": {},
+                                "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                                "f:test": {}
+                            },
+                            "f:finalizers": {
+                                ".": {},
+                                "v:\"resources-finalizer.argocd.argoproj.io\"": {}
+                            }
+                        },
+                        "f:spec": {
+                            ".": {},
+                            "f:destination": {
+                                ".": {},
+                                "f:namespace": {},
+                                "f:server": {}
+                            },
+                            "f:project": {},
+                            "f:source": {
+                                ".": {},
+                                "f:path": {},
+                                "f:repoURL": {},
+                                "f:targetRevision": {}
+                            },
+                            "f:syncPolicy": {
+                                ".": {},
+                                "f:automated": {
+                                    ".": {},
+                                    "f:prune": {},
+                                    "f:selfHeal": {}
+                                },
+                                "f:syncOptions": {}
+                            }
+                        }
+                    },
+                    "manager": "kubectl-client-side-apply",
+                    "operation": "Update",
+                    "time": "2025-01-04T20:21:10Z"
+                }
+            ],
+            "name": "nginx-test",
+            "namespace": "argocd",
+            "resourceVersion": "96812",
+            "uid": "c6c974fa-ba8d-44eb-a1f1-d03fa21c7d61"
+        },
+        "spec": {
+            "destination": {
+                "namespace": "nginx-test",
+                "server": "https://kubernetes.default.svc"
+            },
+            "project": "default",
+            "source": {
+                "path": "./app-of-apps/manifests/simple-app",
+                "repoURL": "https://github.com/dudick123/hello-argo.git",
+                "targetRevision": "HEAD"
+            },
+            "syncPolicy": {
+                "automated": {
+                    "prune": true,
+                    "selfHeal": true
+                },
+                "syncOptions": [
+                    "CreateNamespace=true",
+                    "RespectIgnoreDifferences=true"
+                ]
+            }
+        }
+    }
+}

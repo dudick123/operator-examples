@@ -8,5 +8,11 @@
     },
     "namespace": "argocd",
     "name": "nginx-test",
-    "reconcileID": "cedf0889-52b9-4721-a336-7e03b7a84a32"
+    "reconcileID": "6c3e4de9-2581-4589-ac14-43fb65f32c4b",
+    "app": {
+        "apiVersion": "argoproj.io/v1alpha1",
+        "kind": "Application",
+        "namespace": "argocd",
+        "name": "nginx-test"
+    }
 }

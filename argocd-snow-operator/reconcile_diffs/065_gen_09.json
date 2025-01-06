@@ -1,0 +1,300 @@
+{
+    "name": "nginx-test",
+    "namespace": "argocd"
+},
+"namespace": "argocd",
+"name": "nginx-test",
+"reconcileID": "c5268f90-8f6d-4dee-ad77-c1fba7d1db2b",
+"appObject": {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "Application",
+    "metadata": {
+        "annotations": {
+            "argocd.argoproj.io/compare-options": "IgnoreExtraneous",
+            "foo.bar.com/snow-data": "{\n  \"snow\": \"data\"\n}\n",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"argoproj.io/v1alpha1\",\"kind\":\"Application\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/compare-options\":\"IgnoreExtraneous\",\"foo.bar.com/snow-data\":\"{\\n  \\\"snow\\\": \\\"data\\\"\\n}\\n\",\"test\":\"test 04\"},\"finalizers\":[\"resources-finalizer.argocd.argoproj.io\"],\"name\":\"nginx-test\",\"namespace\":\"argocd\"},\"spec\":{\"destination\":{\"namespace\":\"nginx-test\",\"server\":\"https://kubernetes.default.svc\"},\"project\":\"default\",\"source\":{\"path\":\"./app-of-apps/manifests/simple-app\",\"repoURL\":\"https://github.com/dudick123/hello-argo.git\",\"targetRevision\":\"HEAD\"},\"syncPolicy\":{\"automated\":{\"prune\":true,\"selfHeal\":true},\"syncOptions\":[\"CreateNamespace=true\",\"RespectIgnoreDifferences=true\"]}}}\n",
+            "test": "test 04"
+        },
+        "creationTimestamp": "2025-01-04T20:21:10Z",
+        "finalizers": [
+            "resources-finalizer.argocd.argoproj.io"
+        ],
+        "generation": 9,
+        "managedFields": [
+            {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:argocd.argoproj.io/compare-options": {},
+                            "f:foo.bar.com/snow-data": {},
+                            "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                            "f:test": {}
+                        },
+                        "f:finalizers": {
+                            ".": {},
+                            "v:\"resources-finalizer.argocd.argoproj.io\"": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:destination": {
+                            ".": {},
+                            "f:namespace": {},
+                            "f:server": {}
+                        },
+                        "f:project": {},
+                        "f:source": {
+                            ".": {},
+                            "f:path": {},
+                            "f:repoURL": {},
+                            "f:targetRevision": {}
+                        },
+                        "f:syncPolicy": {
+                            ".": {},
+                            "f:automated": {
+                                ".": {},
+                                "f:prune": {},
+                                "f:selfHeal": {}
+                            },
+                            "f:syncOptions": {}
+                        }
+                    }
+                },
+                "manager": "kubectl-client-side-apply",
+                "operation": "Update",
+                "time": "2025-01-04T20:21:10Z"
+            },
+            {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:status": {
+                        ".": {},
+                        "f:controllerNamespace": {},
+                        "f:health": {
+                            ".": {},
+                            "f:status": {}
+                        },
+                        "f:history": {},
+                        "f:operationState": {
+                            ".": {},
+                            "f:finishedAt": {},
+                            "f:message": {},
+                            "f:operation": {
+                                ".": {},
+                                "f:initiatedBy": {
+                                    ".": {},
+                                    "f:automated": {}
+                                },
+                                "f:retry": {
+                                    ".": {},
+                                    "f:limit": {}
+                                },
+                                "f:sync": {
+                                    ".": {},
+                                    "f:prune": {},
+                                    "f:revision": {},
+                                    "f:syncOptions": {}
+                                }
+                            },
+                            "f:phase": {},
+                            "f:startedAt": {},
+                            "f:syncResult": {
+                                ".": {},
+                                "f:resources": {},
+                                "f:revision": {},
+                                "f:source": {
+                                    ".": {},
+                                    "f:path": {},
+                                    "f:repoURL": {},
+                                    "f:targetRevision": {}
+                                }
+                            }
+                        },
+                        "f:reconciledAt": {},
+                        "f:resources": {},
+                        "f:sourceType": {},
+                        "f:summary": {
+                            ".": {},
+                            "f:images": {}
+                        },
+                        "f:sync": {
+                            ".": {},
+                            "f:comparedTo": {
+                                ".": {},
+                                "f:destination": {
+                                    ".": {},
+                                    "f:namespace": {},
+                                    "f:server": {}
+                                },
+                                "f:source": {
+                                    ".": {},
+                                    "f:path": {},
+                                    "f:repoURL": {},
+                                    "f:targetRevision": {}
+                                }
+                            },
+                            "f:revision": {},
+                            "f:status": {}
+                        }
+                    }
+                },
+                "manager": "argocd-application-controller",
+                "operation": "Update",
+                "time": "2025-01-04T20:21:11Z"
+            }
+        ],
+        "name": "nginx-test",
+        "namespace": "argocd",
+        "resourceVersion": "96846",
+        "uid": "c6c974fa-ba8d-44eb-a1f1-d03fa21c7d61"
+    },
+    "spec": {
+        "destination": {
+            "namespace": "nginx-test",
+            "server": "https://kubernetes.default.svc"
+        },
+        "project": "default",
+        "source": {
+            "path": "./app-of-apps/manifests/simple-app",
+            "repoURL": "https://github.com/dudick123/hello-argo.git",
+            "targetRevision": "HEAD"
+        },
+        "syncPolicy": {
+            "automated": {
+                "prune": true,
+                "selfHeal": true
+            },
+            "syncOptions": [
+                "CreateNamespace=true",
+                "RespectIgnoreDifferences=true"
+            ]
+        }
+    },
+    "status": {
+        "controllerNamespace": "argocd",
+        "health": {
+            "status": "Progressing"
+        },
+        "history": [
+            {
+                "deployStartedAt": "2025-01-04T20:21:11Z",
+                "deployedAt": "2025-01-04T20:21:11Z",
+                "id": 0,
+                "initiatedBy": {
+                    "automated": true
+                },
+                "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                "source": {
+                    "path": "./app-of-apps/manifests/simple-app",
+                    "repoURL": "https://github.com/dudick123/hello-argo.git",
+                    "targetRevision": "HEAD"
+                }
+            }
+        ],
+        "operationState": {
+            "finishedAt": "2025-01-04T20:21:11Z",
+            "message": "successfully synced (all tasks run)",
+            "operation": {
+                "initiatedBy": {
+                    "automated": true
+                },
+                "retry": {
+                    "limit": 5
+                },
+                "sync": {
+                    "prune": true,
+                    "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                    "syncOptions": [
+                        "CreateNamespace=true",
+                        "RespectIgnoreDifferences=true"
+                    ]
+                }
+            },
+            "phase": "Succeeded",
+            "startedAt": "2025-01-04T20:21:11Z",
+            "syncResult": {
+                "resources": [
+                    {
+                        "group": "",
+                        "hookPhase": "Running",
+                        "kind": "Service",
+                        "message": "service/simple-service created",
+                        "name": "simple-service",
+                        "namespace": "nginx-test",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    },
+                    {
+                        "group": "apps",
+                        "hookPhase": "Running",
+                        "kind": "Deployment",
+                        "message": "deployment.apps/simple-deployment created",
+                        "name": "simple-deployment",
+                        "namespace": "nginx-test",
+                        "status": "Synced",
+                        "syncPhase": "Sync",
+                        "version": "v1"
+                    }
+                ],
+                "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+                "source": {
+                    "path": "./app-of-apps/manifests/simple-app",
+                    "repoURL": "https://github.com/dudick123/hello-argo.git",
+                    "targetRevision": "HEAD"
+                }
+            }
+        },
+        "reconciledAt": "2025-01-04T20:21:11Z",
+        "resources": [
+            {
+                "health": {
+                    "status": "Healthy"
+                },
+                "kind": "Service",
+                "name": "simple-service",
+                "namespace": "nginx-test",
+                "status": "Synced",
+                "version": "v1"
+            },
+            {
+                "group": "apps",
+                "health": {
+                    "message": "Waiting for rollout to finish: 0 of 1 updated replicas are available...",
+                    "status": "Progressing"
+                },
+                "kind": "Deployment",
+                "name": "simple-deployment",
+                "namespace": "nginx-test",
+                "status": "Synced",
+                "version": "v1"
+            }
+        ],
+        "sourceType": "Directory",
+        "summary": {
+            "images": [
+                "nginx:1.26.2"
+            ]
+        },
+        "sync": {
+            "comparedTo": {
+                "destination": {
+                    "namespace": "nginx-test",
+                    "server": "https://kubernetes.default.svc"
+                },
+                "source": {
+                    "path": "./app-of-apps/manifests/simple-app",
+                    "repoURL": "https://github.com/dudick123/hello-argo.git",
+                    "targetRevision": "HEAD"
+                }
+            },
+            "revision": "6db7f8f44c5bbc0725ad408c8d39a72379e38893",
+            "status": "Synced"
+        }
+    }
+}
+}
